@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="page-text"> Word List </h1>
+<main class="table-format">
+    <table id="timetable">
+        {% for i in range(0, letterNum): %}
+            <tr>
+                <th class="tooltip">{{ wordlist[i] }}
+                    <span class="tooltiptext">{{shortDef[i]}}</span>
+                </th>
+            </tr>
+        {% endfor %}   
+    </table>
+</main>
+{% endblock %}
